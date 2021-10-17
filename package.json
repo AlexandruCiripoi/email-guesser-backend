@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node ./output/index.js",
     "dev": "nodemon ./output/index.js",
-    "start": "nodemon ./output/index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
