@@ -9,16 +9,15 @@ export const getDerivation: RequestHandler = (req, res, next) => {
       error: "All fields are required",
     });
   let id = Date.now();
-  console.log(intialNameEmailRule);
-  if (intialNameEmailRule.includes(domain)) {
+  if (intialNameEmailRule.includes(domain.toLowerCase())) {
     let response = {
-      email: `${firstName[0]}${lastName}@${domain}`,
+      email: `${firstName[0].toLowerCase()}${lastName.toLowerCase()}@${domain.toLowerCase()}`,
       id: id,
     };
     res.json(response);
-  } else if (fullNameEmailRule.includes(domain)) {
+  } else if (fullNameEmailRule.includes(domain.toLowerCase())) {
     let response = {
-      email: `${firstName}${lastName}@${domain}`,
+      email: `${firstName.toLowerCase()}${lastName.toLowerCase()}@${domain.toLowerCase()}`,
       id: id,
     };
     res.json(response);
