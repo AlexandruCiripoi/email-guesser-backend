@@ -20,9 +20,9 @@ const sorting = (data: object) => {
     const email = obj[key].split("@");
     const emailN = email[0];
     const domain = email[1];
-    if (emailN == `${firstN}${lastN}` && !intialNameEmailRule.includes(domain)) {
+    if (emailN == `${firstN[0]}${lastN}` && !intialNameEmailRule.includes(domain)) {
       intialNameEmailRule.push(domain);
-    } else if (emailN == `${firstN[0]}${lastN}` && !fullNameEmailRule.includes(domain)) {
+    } else if (emailN == `${firstN}${lastN}` && !fullNameEmailRule.includes(domain)) {
       fullNameEmailRule.push(domain);
     }
   }
